@@ -1,0 +1,202 @@
+<template>
+
+<div class="background">
+
+        <div id="dataDisplay" class="center">
+
+            <!-- JSON data will be displayed here -->
+
+        </div>
+
+</div>
+
+</template>
+
+ 
+
+<script lang="js">
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    fetch('https://mesh-api.factset.io/news/429')
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            const dataDisplay = document.getElementById("dataDisplay");
+
+            const table = document.createElement("table");
+
+ 
+
+            // Append table to the "dataDisplay" div
+
+            dataDisplay.appendChild(table);
+
+ 
+
+            // Create table row with label and value cells
+
+            function createTableRow(label, value) {
+
+                const row = document.createElement("tr");
+
+ 
+
+                const labelCell = document.createElement("td");
+
+                labelCell.textContent = label;
+
+                labelCell.classList.add("label");
+
+ 
+
+                const valueCell = document.createElement("td");
+
+                valueCell.textContent = value;
+
+                valueCell.classList.add("value");
+
+ 
+
+                row.appendChild(labelCell);
+
+                row.appendChild(valueCell);
+
+ 
+
+                return row;
+
+            }
+
+ 
+
+   
+
+            table.appendChild(createTableRow("CompanyName", data.company_name));
+
+            table.appendChild(createTableRow("CountryCode", data.country_code));
+
+            table.appendChild(createTableRow("DeliveryTimestampUtc", data.delivery_timestamp_utc));
+
+            table.appendChild(createTableRow("Headline", data.headline));
+
+            table.appendChild(createTableRow("Isin", data.isin));
+
+            table.appendChild(createTableRow("Keywords", data.keywords));
+
+            table.appendChild(createTableRow("NewsId", data.news_id));
+
+            table.appendChild(createTableRow("Story", data.story));
+
+            table.appendChild(createTableRow("TickerId", data.ticker_id));
+
+            table.appendChild(createTableRow("TickerRegion", data.ticker_region));
+
+        })
+
+        .catch(error => console.error("Error fetching JSON data:", error));
+
+});
+
+ 
+
+</script>
+
+ 
+
+<style>
+
+body, html {
+
+    height: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+}
+
+ 
+
+.background {
+
+    background-color: #f2f2f2;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+ 
+
+.center {
+
+    padding: 20px;
+
+    border: 1px solid #ccc;
+
+    background-color: white;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.data-heading {
+
+    text-align: left;
+
+}
+
+.label {
+
+    font-weight: bold;
+
+}
+
+.value {
+
+    padding-left: 10px;
+
+}
+
+ 
+
+table {
+
+    border-collapse: collapse;
+
+    color: black;
+
+}
+
+ 
+
+td {
+
+    border: 0px solid #ddd;
+
+    padding: 8px;
+
+}
+
+ 
+
+    .label,
+
+    .value {
+
+        text-align: left;
+
+    }
+</style>
+
+ 
