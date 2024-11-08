@@ -1,0 +1,71 @@
+async function fetchData() {
+
+    try {
+
+      const response = await fetch('https://mesh-api.factset.io/news');
+
+      const data = await response.json();
+
+      return data;
+
+    } catch (error) {
+
+      console.error('Error fetching data:', error);
+
+    }
+
+  }
+
+ 
+
+<html>
+
+    <head>
+
+        <style>
+
+         
+
+            table {
+
+              width: 100%;
+
+              border-collapse: collapse;
+
+            }
+
+            th, td {
+
+              padding: 10px;
+
+              border: 1px solid #ddd;
+
+            }
+
+            tr:nth-child(even) {
+
+              background-color: #f2f2f2;
+
+            }
+
+            .gray-background {
+
+              background-color: #39759d;
+
+            }
+
+          </style>
+
+    </head>
+
+    <script src="./fetchdata.js"></script>
+
+    <script src="./populatetable.js"></script>
+
+    <body>
+
+<table id="sched-table"></table></body>
+
+</html>
+
+ 

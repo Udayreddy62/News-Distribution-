@@ -1,0 +1,88 @@
+
+{
+
+    "data": [
+
+        {
+
+            "company_name": "BHS tablet AG",
+
+            "country_code": "Alpha-3",
+
+            "delivery_timestamp_utc": "Fri, 10 May 2024 15:12:51 GMT",
+
+            "headline": "Fords stock surges after it doubled its EV production target",
+
+            "isin": "DE000610200",
+
+            "keywords": "Preliminary announcement on the disclosure of financial statements",
+
+            "news_id": "429",
+
+            "story": "This is the story",
+
+            "ticker_id": "F",
+
+            "ticker_region": "TR",
+
+            "topic": "corporate"
+
+        },
+
+        {
+
+            "company_name": "BHS tabletp AG",
+
+            "country_code": "Alpha-3",
+
+            "delivery_timestamp_utc": "Fri, 10 May 2024 15:12:51 GMT",
+
+            "headline": "Headline 2",
+
+            "isin": "DE000610200",
+
+            "keywords": "Keywords 2",
+
+            "news_id": "461",
+
+            "story": "This is the story 2",
+
+            "ticker_id": "F",
+
+            "ticker_region": "TR",
+
+            "topic": "corporate"
+
+        },
+
+        {
+
+            "company_name": "BHS tabletop AG",
+
+            "country_code": "Alpha-3",
+
+            "delivery_timestamp_utc": "Fri, 10 May 2024 15:12:51 GMT",
+
+            "headline": "Headline 3",
+
+            "isin": "DE000610200",
+
+            "keywords": "Keywords 3",
+
+            "news_id": "400",
+
+            "story": "This is the story 3",
+
+            "ticker_id": "F",
+
+            "ticker_region": "TR",
+
+            "topic": "corporate"
+
+        }
+
+    ]
+
+}
+
+  
